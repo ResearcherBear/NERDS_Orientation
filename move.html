@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Move</title>
+<link rel="stylesheet" href="move.css" />
+</head>
+<body>
+
+<div class="screen">
+
+  <div class="pikachu-slot" id="pikachuSlot">
+    <img src="abcd.gif" alt="Description of the animation">
+  </div>
+
+  <div class="title-box">
+    <h1>MOVE</h1>
+  </div>
+
+  <!-- STATE 1: unlock gate -->
+  <div class="panel" id="unlockPanel">
+    <p class="panel-heading" id="unlockHeading">Enter The Unique Code To Start</p>
+
+    <input
+      type="text"
+      id="unlockInput"
+      class="answer-input"
+      maxlength="6"
+      inputmode="numeric"
+      pattern="\d{6}"
+      placeholder="6-digit code"
+      autocomplete="off"
+    />
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="unlockBackBtn">BACK</button>
+      <button type="button" class="nav-btn" id="unlockBtn">UNLOCK</button>
+    </div>
+  </div>
+
+  <!-- STATE 2: the maze puzzle -->
+  <div class="panel hidden" id="movePanel">
+    <p class="panel-heading">Find The Shortest Path</p>
+
+    <img src="maze.png" alt="Maze grid - black squares are obstacles, white squares are open path" class="maze-img" />
+
+    <p class="instructions">
+      Black = obstacle. White = open path.<br />
+      Start at <strong>S</strong>, reach <strong>E</strong>, using the fewest moves.<br />
+      <strong>L</strong> = Left, <strong>R</strong> = Right, <strong>U</strong> = Up.<br />
+      Write your answer as a sequence of letters, e.g. <strong>LURL</strong> means
+      Left, Up, Right, Left in that order.
+    </p>
+
+    <input type="text" id="answerInput" class="answer-input" autocomplete="off" placeholder="e.g. LURL" />
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="backBtn">BACK</button>
+      <button type="button" class="nav-btn" id="submitBtn">SUBMIT</button>
+    </div>
+  </div>
+
+  <!-- STATE 3: result (also shown immediately if already solved before) -->
+  <div class="panel hidden" id="resultPanel">
+    <p class="panel-heading" id="resultHeading">Correct!</p>
+    <p class="result-points" id="resultPoints">+150 points</p>
+    <p class="result-note">This puzzle is now locked and can't be answered again.</p>
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="resultBackBtn">BACK</button>
+    </div>
+  </div>
+
+  <div class="title-box">
+    <div class="last">
+      CREATED BY NITS EMBEDDED AND ROBOTICS DEVELOPMENT SOCIETY
+    </div>
+  </div>
+
+</div>
+
+<script type="module" src="move.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Figure</title>
+<link rel="stylesheet" href="figure.css" />
+</head>
+<body>
+
+<div class="screen">
+
+  <!-- Pikachu gif goes here -->
+  <div class="pikachu-slot" id="pikachuSlot">
+    <img src="abcd.gif" alt="Description of the animation">
+  </div>
+
+  <div class="title-box">
+    <h1>FIGURE</h1>
+  </div>
+
+  <!-- STATE 1: shown first - must enter the correct code to unlock this riddle -->
+  <div class="panel" id="unlockPanel">
+    <p class="panel-heading" id="unlockHeading">Enter The Unique Code To Start</p>
+
+    <input
+      type="text"
+      id="unlockInput"
+      class="answer-input"
+      maxlength="6"
+      inputmode="numeric"
+      pattern="\d{6}"
+      placeholder="6-digit code"
+      autocomplete="off"
+    />
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="unlockBackBtn">BACK</button>
+      <button type="button" class="nav-btn" id="unlockBtn">UNLOCK</button>
+    </div>
+  </div>
+
+  <!-- STATE 2: hidden until the code is correct - the riddle itself -->
+  <div class="panel hidden" id="figurePanel">
+    <p class="panel-heading" id="figureHeading">Who Am I?</p>
+
+    <p class="question">
+      I am not a classroom or a hall.<br />
+      I reside before a statue tall.<br />
+      What am I?
+    </p>
+
+    <input type="text" id="answerInput" class="answer-input" autocomplete="off" placeholder="Type your answer" />
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="backBtn">BACK</button>
+      <button type="button" class="nav-btn" id="submitBtn">SUBMIT</button>
+    </div>
+  </div>
+
+  <!-- STATE 3: hidden until solved (or already solved on a previous visit) -->
+  <div class="panel hidden" id="resultPanel">
+    <p class="panel-heading" id="resultHeading">Correct!</p>
+    <p class="result-points" id="resultPoints">+150 points</p>
+    <p class="result-note">This riddle is now locked and can't be answered again.</p>
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="resultBackBtn">BACK</button>
+    </div>
+  </div>
+  <div class="title-box">
+      <div CLASS="last">
+    CREATED BY NITS EMBEDDED AND ROBOTICS DEVELOPMENT SOCIETY    
+  </div>
+  </div>
+</div>
+
+<script type="module" src="figure.js"></script>
+</body>
+</html>

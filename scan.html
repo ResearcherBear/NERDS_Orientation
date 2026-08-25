@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Enter Code</title>
+<link rel="stylesheet" href="scan.css" />
+</head>
+<body>
+
+<div class="screen">
+
+  <div class="title-box">
+    <h1>Catch Them All!</h1>
+  </div>
+
+  <div class="action-row">
+    <button type="button" class="action-btn active" id="scanBtn">SCAN</button>
+    <button type="button" class="action-btn" id="mapBtn">MAP</button>
+  </div>
+
+  <div class="panel">
+    <p class="panel-heading" id="panelHeading">Write Down The Unique Code</p>
+
+    <!-- Camera preview for QR scanning -->
+    <div class="qr-slot" id="qrSlot">
+      <video id="cameraFeed" autoplay muted playsinline></video>
+      <canvas id="cameraCanvas" hidden></canvas>
+    </div>
+
+    <p class="camera-hint" id="cameraHint">Point your camera at a QR code</p>
+
+    <div id="codeDisplay" class="code-display">------</div>
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="backBtn">BACK</button>
+    </div>
+
+    <!-- Pikachu-on-water gif goes here -->
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+<script type="module" src="scan.js"></script>
+</body>
+</html>

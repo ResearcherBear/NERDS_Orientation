@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scholar Registry - Sign Up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+
+<div class="screen">
+
+  <!-- Pikachu gif goes here -->
+  <div class="pikachu-slot" id="pikachuSlot">
+    <img src="abcd.gif" alt="Description of the animation">
+  </div>
+
+  <div class="title-box">
+    <h1>Scholar Registry</h1>
+  </div>
+
+  <div class="panel">
+    <div class="tab-row">
+      <button type="button" class="tab" id="loginTab">LOGIN</button>
+      <button type="button" class="tab active" id="signupTab">SIGN UP</button>
+    </div>
+
+    <form id="signupForm">
+      <label for="scholarId">SCHOLAR ID</label>
+      <input type="text" id="scholarId" name="scholarId" autocomplete="off" required />
+
+      <label for="email">E-MAIL</label>
+      <input type="email" id="email" name="email" autocomplete="off" required />
+
+      <label for="password">PASSWORD</label>
+      <input type="password" id="password" name="password" maxlength="6" inputmode="numeric" pattern="\d{6}" required />
+
+      <button type="submit" class="start-btn" id="startBtn">START</button>
+    </form>
+  </div>
+
+  <div class="dialog-box">
+    <p id="dialogText">Hello there! welcome to the world of NIT Silchar</p>
+    <button type="button" class="ok-btn" id="okBtn">OK</button>
+  </div>
+
+</div>
+
+<script type="module" src="signup.js"></script>
+</body>
+</html>

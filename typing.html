@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Typing Speed</title>
+<link rel="stylesheet" href="typing.css" />
+</head>
+<body>
+
+<div class="screen">
+
+  <!-- Pikachu gif goes here -->
+  <div class="pikachu-slot" id="pikachuSlot">
+    <img src="abcd.gif" alt="Description of the animation">
+  </div>
+  <div class="title-box">
+    <h1>TYPING SPEED</h1>
+  </div>
+
+  <!-- STATE 1: unlock gate -->
+  <div class="panel" id="unlockPanel">
+    <p class="panel-heading" id="unlockHeading">Enter The Unique Code To Start</p>
+
+    <input
+      type="text"
+      id="unlockInput"
+      class="answer-input"
+      maxlength="6"
+      inputmode="numeric"
+      pattern="\d{6}"
+      placeholder="6-digit code"
+      autocomplete="off"
+    />
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="unlockBackBtn">BACK</button>
+      <button type="button" class="nav-btn" id="unlockBtn">UNLOCK</button>
+    </div>
+  </div>
+
+  <!-- STATE 2: 3, 2, 1, GO countdown -->
+  <div class="panel hidden" id="countdownPanel">
+    <p class="countdown-label">Get Ready...</p>
+    <p class="countdown-number" id="countdownNumber">3</p>
+  </div>
+
+  <!-- STATE 3: the actual typing test -->
+  <div class="panel hidden" id="typingPanel">
+    <p class="panel-heading" id="typingHeading">Type The Sentence Below</p>
+
+    <p class="target-sentence" id="targetSentence"></p>
+
+    <textarea
+      id="typingInput"
+      class="typing-input"
+      rows="3"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      placeholder="Start typing here..."
+    ></textarea>
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="backBtn">BACK</button>
+      <button type="button" class="nav-btn" id="submitBtn">SUBMIT</button>
+    </div>
+  </div>
+
+  <!-- STATE 4: result (also shown immediately if already solved before) -->
+  <div class="panel hidden" id="resultPanel">
+    <p class="panel-heading" id="resultHeading">Nice Typing!</p>
+    <p class="result-line" id="resultWpm"></p>
+    <p class="result-line" id="resultErrors"></p>
+    <p class="result-points" id="resultPoints"></p>
+    <p class="result-note">This challenge is now locked and can't be retaken.</p>
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="resultBackBtn">BACK</button>
+    </div>
+  </div>
+     <div class="title-box">
+      <div CLASS="last">
+    CREATED BY NITS EMBEDDED AND ROBOTICS DEVELOPMENT SOCIETY    
+  </div>
+
+</div>
+
+<script type="module" src="typing.js"></script>
+</body>
+</html>

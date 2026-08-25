@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'Pokemon Classic';
+  src: url('Pokemon Classic.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffe23f;
+  font-family: 'Pokemon Classic', monospace;
+  color: #1a1a1a;
+  padding: 20px;
+}
+
+.screen {
+  width: 320px;
+  height: 600px;
+  background: #FDFEED;
+  border: 3px double #000;
+  padding: 16px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.title-box {
+  border: 3px double #000;
+  padding: 12px 8px;
+  text-align: center;
+  margin-top:30px ;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+.title-box h1 {
+  font-size: 12px;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.action-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.action-btn {
+  font-family: inherit;
+  font-size: 8px;
+  padding: 6px 10px;
+  background: #fff;
+  border: 3px double #000;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background: #FDFEED;
+}
+
+.action-btn.active {
+  background: #ffe9a8;
+}
+
+.panel {
+  border: 3px double #000;
+  padding: 10px;
+  background: #fff;
+}
+
+.map-box {
+  width: 100%;
+  height: 200px;
+  background: repeating-linear-gradient(
+    45deg,
+    #eaeaea,
+    #eaeaea 10px,
+    #dedede 10px,
+    #dedede 20px
+  );
+  border: 3px double #000;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-hint {
+  font-size: 8px;
+  text-align: center;
+  margin: 0;
+  color: #333;
+}
+
+.panel-heading {
+  font-size: 8px;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.code-input {
+  width: 100%;
+  padding: 9px 8px;
+  margin-bottom: 12px;
+  background: #d9d9d9;
+  border: 3px double #000;
+  font-family: inherit;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nav-btn {
+  font-family: inherit;
+  font-size: 8px;
+  padding: 6px 14px;
+  background: #fff;
+  border: 3px double #000;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: #FDFEED;
+}
+
+.pikachu-final {
+  width: 90px;
+  height: 90px;
+  margin: 10px 0 0 auto;
+  overflow: hidden;
+  /* Replace with: <img src="pikachu-water.gif" alt="Pikachu" /> */
+}
+
+.pikachu-final img,
+.pikachu-final svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}

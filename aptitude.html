@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aptitude Quiz</title>
+<link rel="stylesheet" href="aptitude.css" />
+</head>
+<body>
+
+<div class="screen">
+
+  <!-- Pikachu gif goes here -->
+ <div class="pikachu-slot" id="pikachuSlot">
+    <img src="abcd.gif" alt="Description of the animation">
+  </div>
+
+  <div class="title-box">
+    <h1>APTITUDE</h1>
+  </div>
+
+  <!-- STATE 1: unlock gate -->
+  <div class="panel" id="unlockPanel">
+    <p class="panel-heading" id="unlockHeading">Enter The Unique Code To Start</p>
+
+    <input
+      type="text"
+      id="unlockInput"
+      class="answer-input"
+      maxlength="6"
+      inputmode="numeric"
+      pattern="\d{6}"
+      placeholder="6-digit code"
+      autocomplete="off"
+    />
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="unlockBackBtn">BACK</button>
+      <button type="button" class="nav-btn" id="unlockBtn">UNLOCK</button>
+    </div>
+  </div>
+
+  <!-- STATE 2: one question at a time -->
+  <div class="panel hidden" id="quizPanel">
+    <p class="panel-heading" id="quizHeading">Question <span id="questionNum">1</span> of 5</p>
+
+    <p class="question" id="questionText"></p>
+
+    <input type="text" id="answerInput" class="answer-input" autocomplete="off" placeholder="Your answer" />
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="backBtn">BACK</button>
+      <button type="button" class="nav-btn" id="nextBtn">NEXT</button>
+    </div>
+  </div>
+
+  <!-- STATE 3: result (also shown immediately if already solved before) -->
+  <div class="panel hidden" id="resultPanel">
+    <p class="panel-heading" id="resultHeading">Quiz Complete!</p>
+    <p class="result-line" id="resultCorrect"></p>
+    <p class="result-line" id="resultTime"></p>
+    <p class="result-points" id="resultPoints"></p>
+    <p class="result-note">This quiz is now locked and can't be retaken.</p>
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="resultBackBtn">BACK</button>
+    </div>
+  </div>
+   <div class="title-box">
+      <div CLASS="last">
+    CREATED BY NITS EMBEDDED AND ROBOTICS DEVELOPMENT SOCIETY    
+  </div>
+  </div> 
+</div>
+
+<script type="module" src="aptitude.js"></script>
+</body>
+</html>

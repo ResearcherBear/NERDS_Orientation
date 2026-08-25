@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mini Sudoku</title>
+<link rel="stylesheet" href="sudoku.css" />
+</head>
+<body>
+
+<div class="screen">
+  <div class="pikachu-slot" id="pikachuSlot">
+    <img src="abcd.gif" alt="Description of the animation">
+  </div>
+  <div class="title-box">
+    <h1>MINI SUDOKU</h1>
+  </div>
+
+  <!-- STATE 1: unlock gate -->
+  <div class="panel" id="unlockPanel">
+    <p class="panel-heading" id="unlockHeading">Enter The Unique Code To Start</p>
+
+    <input
+      type="text"
+      id="unlockInput"
+      class="answer-input"
+      maxlength="6"
+      inputmode="numeric"
+      pattern="\d{6}"
+      placeholder="6-digit code"
+      autocomplete="off"
+    />
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="unlockBackBtn">BACK</button>
+      <button type="button" class="nav-btn" id="unlockBtn">UNLOCK</button>
+    </div>
+  </div>
+
+  <!-- STATE 2: the puzzle itself -->
+  <div class="panel hidden" id="sudokuPanel">
+    <p class="panel-heading" id="sudokuHeading">Fill 1-4 In Every Row, Column &amp; Box</p>
+
+    <div class="sudoku-grid" id="sudokuGrid"></div>
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="backBtn">BACK</button>
+      <button type="button" class="nav-btn" id="submitBtn">SUBMIT</button>
+    </div>
+  </div>
+
+  <!-- STATE 3: result (also shown immediately if already solved before) -->
+  <div class="panel hidden" id="resultPanel">
+    <p class="panel-heading" id="resultHeading">Solved!</p>
+    <p class="result-line" id="resultTime"></p>
+    <p class="result-points" id="resultPoints"></p>
+    <p class="result-note">This puzzle is now locked and can't be replayed for more points.</p>
+
+    <div class="nav-row">
+      <button type="button" class="nav-btn" id="resultBackBtn">BACK</button>
+    </div>
+  </div>
+   <div class="title-box">
+      <div CLASS="last">
+    CREATED BY NITS EMBEDDED AND ROBOTICS DEVELOPMENT SOCIETY    
+  </div>
+  </div> 
+
+</div>
+
+<script type="module" src="sudoku.js"></script>
+</body>
+</html>
